@@ -32,4 +32,27 @@
 - Sort removing duplicated lines: \
 `:%sort u`
 
+## GIT <a name="git"></a>
 
+- List all files being tracked on branch `master`: \
+`git ls-tree -r master --name-only`
+
+- List all files ever existed: \
+`git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'`
+
+- Stop tracking and ignore changes to a file: \
+`git rm --cached` on each of the files you want to remove from revision control \
+To prevent git from detecting changes in these files use `git update-index --assume-unchanged [path]`
+
+- Make .gitignore ignore everything except a few files:
+```
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+```
