@@ -1,4 +1,9 @@
-## BASH
+## Table of Contents
+1. [Bash](#bash)
+2. [Vim](#vim)
+3. [Git](#git)
+
+## BASH <a name="bash"></a>
 
 - Find last day modified files on current path and subdirectories: \
 `find . -mtime -1 -print`
@@ -18,7 +23,7 @@
 - Analize file, grep by `error` string and get only string after `Instrument not found:` string, then sort, get unique strings and save to `ERRORS.log` file: \
 `cat 2016-02-26T13%3A35%3A51%3A817.log | grep -ni "error" | sed 's/.*Instrument not found://' | sort | uniq > ERRORS.log`
 
-## VIM
+## VIM <a name="vim"></a>
 
 - Delete everything within double quotes: \
  `di"`
